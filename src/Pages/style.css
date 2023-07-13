@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: "Lexend", sans-serif;
+}
+
+/*  */
+
+.how-it-works {
+    display: flex;
+}
+
+.how-card-header img {
+    width: 100%;
+}
+
+.how-card {
+    margin-right: 15px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    border-radius: 20px;
+}
+
+.work-head {
+    text-align: center;
+    font-weight: 500;
+}
+
+.wash {
+    color: #266A26;
+    font-weight: 500;
+}
+
+.how-card-body {
+    padding: 15px 25px;
+}
+
+.how {
+    background: #ECFFEC;
+    padding: 50px 0 60px 0;
+}
+
+.how-card-body p {
+    font-size: 14px;
+}
+@media screen and (max-width: 992px) {
+    .how-it-works {
+        flex-direction: column;
+    }
+
+    .how-card {
+        margin-bottom: 15px;
+    }
+}
+
+/* styling the hero section */
+.section {
+    width: 100%;
+    display: block;
+    height: 700px;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+.hero-icons {
+    display: flex;
+}
+
+.hero-icons p {
+    color: rgba(225, 221, 221, 0.636);
+}
+
+.hero-content {
+    padding: 15% 80px;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-weight: 800;
+}
