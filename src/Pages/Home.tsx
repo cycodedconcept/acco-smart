@@ -3,9 +3,15 @@ import './style.css'
 import { How1, How2, How3, Hero, Autonew, Lap, Clock } from '../assets'
 
 const Home: React.FC = () => {
+
+    const myVideos = [
+        {
+            
+        }
+    ]
   return (
     <div>
-      <div className="section" style={{backgroundImage: `url(${Hero})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+      <div className="section-hero" style={{backgroundImage: `url(${Hero})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
           
           <div className="hero-content">
               <h1>Upskill For Global<br></br> Growth.</h1>
@@ -61,6 +67,17 @@ const Home: React.FC = () => {
           </div>
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
       </div>
+
+      <div className="section-works mt-5">
+          <div className="row">
+              <div className="col-sm-12 col-md-12 col-lg-1"></div>
+              <div className="col-sm-12 col-md-12 col-lg-10">
+                  <h2 className='text-center'>Our Projects</h2>
+              </div>
+              <div className="col-sm-12 col-md-12 col-lg-1"></div>
+          </div>
+      </div>
+
     </div>
   )
 }
