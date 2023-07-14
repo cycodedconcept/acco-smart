@@ -1,14 +1,81 @@
 import React from 'react'
 import './style.css'
-import { How1, How2, How3, Hero, Autonew, Lap, Clock } from '../assets'
+import { How1, How2, How3, Hero, Autonew, Lap, Clock, Vimage } from '../assets'
+
+
+interface Ivideo {
+    id: number;
+    image: any;
+    heading: string;
+    paragraph: string;
+    url: string;
+}
+
+const myVideos: Ivideo[] = [
+    {
+        id: 0,
+        image: Vimage,
+        heading: "Marketing",
+        paragraph: "Master the principles of 360 marketing for business growth.",
+        url: "https://www.projectguide.com"
+    },
+    {
+        id: 1,
+        image: Vimage,
+        heading: "Marketing",
+        paragraph: "Master the principles of 360 marketing for business growth.",
+        url: "https://www.projectguide.com"
+    },
+    {
+        id: 2,
+        image: Vimage,
+        heading: "Marketing",
+        paragraph: "Master the principles of 360 marketing for business growth.",
+        url: "https://www.projectguide.com"
+    },
+    {
+        id: 3,
+        image: Vimage,
+        heading: "Marketing",
+        paragraph: "Master the principles of 360 marketing for business growth.",
+        url: "https://www.projectguide.com"
+    },
+    {
+        id: 4,
+        image: Vimage,
+        heading: "Marketing",
+        paragraph: "Master the principles of 360 marketing for business growth.",
+        url: "https://www.projectguide.com"
+    },
+    {
+        id: 5,
+        image: Vimage,
+        heading: "Marketing",
+        paragraph: "Master the principles of 360 marketing for business growth.",
+        url: "https://www.projectguide.com"
+    }
+]
+
+// create a function to map through your array of objects
+const videoViewArr = myVideos.map(item =>
+    <div className='col-sm-12 col-md-12 col-lg-4' key={item.id}>
+        <div className='video-card'>
+            <div className="video-card-header">
+            <img src={ item.image } alt="" className='w-15'/>
+            </div>
+            <div className="video-card-body">
+                <h5>{ item.heading }</h5>
+                <p>{ item.paragraph }</p>
+            </div>
+            <div className="video-card-footer">
+                <button className='vbtn' onClick={() => window.location.href = item.url}>Download Project Guide</button>
+            </div>
+        </div>
+    </div>
+)
 
 const Home: React.FC = () => {
-
-    const myVideos = [
-        {
-            
-        }
-    ]
+    
   return (
     <div>
       <div className="section-hero" style={{backgroundImage: `url(${Hero})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
@@ -73,6 +140,9 @@ const Home: React.FC = () => {
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
               <div className="col-sm-12 col-md-12 col-lg-10">
                   <h2 className='text-center'>Our Projects</h2>
+                  <div className="row">
+                      { videoViewArr }
+                  </div>
               </div>
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
           </div>

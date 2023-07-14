@@ -10,6 +10,8 @@ export const Hero = require('./hero.png');
 export const Autonew = require('./autorenew.png');
 export const Lap = require('./laptop_mac.png');
 export const Clock = require('./clock.png');
+export const Vimage = require('./vimg.png');
+
 
 
 
