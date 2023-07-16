@@ -11,7 +11,11 @@ export const Autonew = require('./autorenew.png');
 export const Lap = require('./laptop_mac.png');
 export const Clock = require('./clock.png');
 export const Vimage = require('./vimg.png');
-
+export const Fimage = require('./fimg.png');
+export const Ahero = require('./mana.png');
+export const V1 = require('./v1.png');
+export const V2 = require('./v2.png');
+export const ProImage = require('./pimg.png');
 
 
 

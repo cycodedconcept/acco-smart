@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './style.css'
-import { How1, How2, How3, Hero, Autonew, Lap, Clock, Vimage } from '../assets'
+import { How1, How2, How3, Hero, Autonew, Lap, Clock, Vimage, Fimage } from '../assets'
 
 
 interface Ivideo {
@@ -64,7 +66,7 @@ const videoViewArr = myVideos.map(item =>
             <img src={ item.image } alt="" className='w-15'/>
             </div>
             <div className="video-card-body">
-                <h5>{ item.heading }</h5>
+                <h5 className='wash'>{ item.heading }</h5>
                 <p>{ item.paragraph }</p>
             </div>
             <div className="video-card-footer">
@@ -75,23 +77,29 @@ const videoViewArr = myVideos.map(item =>
 )
 
 const Home: React.FC = () => {
-    
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
   return (
     <div>
-      <div className="section-hero" style={{backgroundImage: `url(${Hero})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
-          
-          <div className="hero-content">
-              <h1>Upskill For Global<br></br> Growth.</h1>
-              <p>
-                Learn cutting-edge Business, Management and<br></br> Corporate skills with real world case studies and<br></br> earn globally recognized certificates
-              </p>
-              <div className="hero-icons">
-                  <p className='mr-5'><img src={ Autonew } alt="" /> Flexible</p>
-                  <p className='mr-5'><img src={ Clock } alt="" /> Fast</p>
-                  <p><img src={ Lap } alt="" /> 100% Online</p>
-              </div>
-          </div>
-      </div>
+        <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <div className="section-hero" style={{backgroundImage: `url(${Hero})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                
+                <div className="hero-content">
+                    <h1>Upskill For Global<br></br> Growth.</h1>
+                    <p>
+                        Learn cutting-edge Business, Management and<br></br> Corporate skills with real world case studies and<br></br> earn globally recognized certificates
+                    </p>
+                    <div className="hero-icons">
+                        <p className='mr-5'><img src={ Autonew } alt="" /> Flexible</p>
+                        <p className='mr-5'><img src={ Clock } alt="" /> Fast</p>
+                        <p><img src={ Lap } alt="" /> 100% Online</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
       <div className="row how">
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
           <div className="col-sm-12 col-md-12 col-lg-10">
@@ -135,18 +143,23 @@ const Home: React.FC = () => {
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
       </div>
 
-      <div className="section-works mt-5">
+      <div className="section-works mt-5 mb-5">
           <div className="row">
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
               <div className="col-sm-12 col-md-12 col-lg-10">
-                  <h2 className='text-center'>Our Projects</h2>
+                  <h2 className='text-center mb-5'>Our Projects</h2>
                   <div className="row">
                       { videoViewArr }
+                  </div>
+                  <div className="view-section-btn text-center mt-5">
+                      <button>View all Project</button>
                   </div>
               </div>
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
           </div>
       </div>
+
+      <div className="section-full-video" style={{backgroundImage: `url(${Fimage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}></div>
 
     </div>
   )

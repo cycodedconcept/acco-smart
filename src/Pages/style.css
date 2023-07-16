@@ -34,7 +34,7 @@
     padding: 15px 25px;
 }
 
-.how {
+.how, .section-culture {
     background: #ECFFEC;
     padding: 50px 0 80px 0;
 }
@@ -49,34 +49,116 @@
 
     .how-card {
         margin-bottom: 15px;
+        width: 100%;
+    }
+    br {
+        display: none;
     }
 }
 
 /* styling the hero section */
-.section-hero {
+.section-hero, .section-full-video {
     width: 100%;
     display: block;
     height: 700px;
     margin: 0 0 30px 0;
+    position: relative;
 }
 
 .row {
     margin: 0 !important;
 }
 
-.hero-icons {
+.hero-icons, .hero-icons-about {
     display: flex;
 }
 
-.hero-icons p {
+.hero-icons p, .hero-icons-about p {
     color: rgba(225, 221, 221, 0.636);
 }
 
-.hero-content {
+.hero-content, .hero-content-about {
     padding: 15% 80px;
     color: #fff;
 }
 
-.hero-content h1 {
+.hero-content-about {
+    position: absolute;
+    right: 5%;
+}
+
+.hero-content h1, .hero-content-about h1 {
     font-weight: 800;
+}
+
+
+
+.vbtn {
+    outline: none;
+    border: 0;
+    box-shadow: none;
+    background: #fff;
+    color: #266A26;
+}
+
+.video-card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.video-card-body {
+    padding: 10px 0;
+}
+
+.view-section-btn button {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    padding: 10px 85px;
+    background: #266A26;
+    color: #fff;
+}
+
+.about-card-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-unit {
+    padding: 30px 40px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.section-about {
+    padding: 40px 0;
+}
+
+.project-text {
+    margin: 8% auto;
+}
+
+.project-text p {
+    font-size: 14px;
+}
+
+.pohead {
+    margin: 80px 0;
+}
+
+@media screen and (max-width: 992px) {
+    .about-card-section {
+        flex-direction: column;
+    }
+
+    .card-unit-text {
+        text-align: center;
+    }
+
+    .card-unit {
+        padding: 35px;
+        margin: 17px 30px;
+    }
 }
