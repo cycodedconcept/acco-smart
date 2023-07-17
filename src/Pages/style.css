@@ -34,10 +34,16 @@
     padding: 15px 25px;
 }
 
-.how, .section-culture {
+.how, .section-culture, .section-reach {
     background: #ECFFEC;
     padding: 50px 0 80px 0;
 }
+
+.section-reach {
+    padding: 80px 0;
+}
+
+
 
 .how-card-body p {
     font-size: 14px;
@@ -61,7 +67,7 @@
     width: 100%;
     display: block;
     height: 700px;
-    margin: 0 0 30px 0;
+    /* margin: 0 0 30px 0; */
     position: relative;
 }
 

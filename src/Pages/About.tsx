@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './style.css'
-import { Autonew, Lap, Clock, Ahero, V1, V2, ProImage, Fimage } from '../assets'
+import { Autonew, Lap, Clock, Ahero, V1, V2, ProImage, Fimage, Lif, Lib, Liins, Mark, Phone, Mail, Reach } from '../assets'
 
 
 
@@ -133,18 +133,29 @@ const About: React.FC = () => {
       <div className="section-full-video mt-5" style={{backgroundImage: `url(${Fimage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}></div>
 
       <div className="section-reach">
+          <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
           <div className="col-sm-12 col-md-12 col-lg-10">
               <div className="row">
                   <div className="col-sm-12 col-md-12 col-lg-6">
                       <div className="reach-text">
-                          <h3>Reach Out to Us3</h3>
+                          <h2 className='wash mb-5'>Reach Out to Us</h2>
+
+                          <p><img src={ Phone } alt="" className='mr-3'/> +234 803 338 4408</p>
+                          <p><img src={ Lib } alt="" className='mr-3'/> credbride_consulting</p>
+                          <p><img src={ Liins } alt="" className='mr-3'/> credbride_consulting</p>
+                          <p><img src={ Lif } alt="" className='mr-3'/> credbride_consulting</p>
+                          <p><img src={ Mail } alt="" className='mr-3'/> info.credbrideconsulting@gmail.com</p>
+                          <p><img src={ Mark } alt="" className='mr-3'/> 11 Opebi Street Ikeja, Lagos State</p>
                       </div>
                   </div>
-                  <div className="col-sm-12 col-md-12 col-lg-6"></div>
+                  <div className="col-sm-12 col-md-12 col-lg-6">
+                      <img src={ Reach } alt="" className='w-75'/>
+                  </div>
               </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
+          </div>
       </div>
       
     </div>
