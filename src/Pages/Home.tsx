@@ -61,6 +61,7 @@ const myVideos: Ivideo[] = [
 // create a function to map through your array of objects
 const videoViewArr = myVideos.map(item =>
     <div className='col-sm-12 col-md-12 col-lg-4' key={item.id}>
+        <div data-aos="zoom-out">
         <div className='video-card'>
             <div className="video-card-header">
             <img src={ item.image } alt="" className='w-15'/>
@@ -72,6 +73,7 @@ const videoViewArr = myVideos.map(item =>
             <div className="video-card-footer">
                 <button className='vbtn' onClick={() => window.location.href = item.url}>Download Project Guide</button>
             </div>
+        </div>
         </div>
     </div>
 )
@@ -103,42 +105,48 @@ const Home: React.FC = () => {
       <div className="row how">
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
           <div className="col-sm-12 col-md-12 col-lg-10">
-          <h4 className='work-head'>How It works</h4>
-              <div className="how-it-works">
-                  <div className="how-card">
-                      <div className="how-card-header">
-                          <img src={ How3 } alt=""/>
-                      </div>
-                      <div className="how-card-body">
-                          <h5 className='wash'>Get Our Website URL</h5>
-                          <p>
-                            Learn business & management courses, 100%
-                          </p>
-                      </div>
-                  </div>
-                  <div className="how-card">
-                      <div className="how-card-header">
-                          <img src={ How2 } alt=""/>
-                      </div>
-                      <div className="how-card-body">
-                          <h5 className='wash'>Learn About Us</h5>
-                          <p>
-                             Discover SAGE. Our partners, history,<br></br> accreditation & culture.
-                          </p>
-                      </div>
-                  </div>
-                  <div className="how-card">
-                      <div className="how-card-header">
-                          <img src={ How1 } alt=""/>
-                      </div>
-                      <div className="how-card-body">
-                          <h5 className='wash'>Start Watching Videos</h5>
-                          <p>
-                            Stand out boldly with the Sage Mini-MBA
-                          </p>
-                      </div>
-                  </div>
-              </div>
+                <h4 className='work-head'>How It works</h4>
+                <div className="how-it-works">
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                            <div className="how-card">
+                                <div className="how-card-header">
+                                    <img src={ How3 } alt=""/>
+                                </div>
+                                <div className="how-card-body">
+                                    <h5 className='wash'>Get Our Website URL</h5>
+                                    <p>
+                                    Learn business & management courses, 100%
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <div className="how-card">
+                            <div className="how-card-header">
+                                <img src={ How2 } alt=""/>
+                            </div>
+                            <div className="how-card-body">
+                                <h5 className='wash'>Learn About Us</h5>
+                                <p>
+                                    Discover SAGE. Our partners, history,<br></br> accreditation & culture.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <div className="how-card">
+                            <div className="how-card-header">
+                                <img src={ How1 } alt=""/>
+                            </div>
+                            <div className="how-card-body">
+                                <h5 className='wash'>Start Watching Videos</h5>
+                                <p>
+                                Stand out boldly with the Sage Mini-MBA
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
       </div>

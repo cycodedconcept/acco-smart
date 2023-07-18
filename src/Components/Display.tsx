@@ -4,6 +4,7 @@ import Navbar from './Navigation/Navbar';
 import Footer from './Footer/Footer';
 import Home from '../Pages/Home';
 import About from '../Pages/About'
+import Contact from '../Pages/Contact';
 
 const Display = () => {
   return (
@@ -12,6 +13,7 @@ const Display = () => {
       <Routes>
       <Route index element={<Home />}/>
       <Route path="about" element={<About />}/>
+      <Route path="contact" element={<Contact />}/>
       </Routes>
       <Footer />
     </BrowserRouter>
