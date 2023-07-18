@@ -1,23 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './footer.css'
 import { Logo, Face, Twitter, In, Ins } from '../../assets/';
 
-const getPartnership = () => {
-  window.location.href = "https://docs.google.com/document/d/1jyN5SrQpAeTOWu6D89f-xIV8t4GRmbKA/edit?usp=drive_link&ouid=104074875044099012246&rtpof=true&sd=true"
-}
+import Modal from "react-modal"
+Modal.setAppElement("#root");
 
-const getAchieve = () => {
-  window.location.href = "https://docs.google.com/document/d/1kc9D-7aQkaDSDB7kxKoozPP2SLzOexQ4/edit?usp=sharing&ouid=104074875044099012246&rtpof=true&sd=true"
-}
 
-const lessonPlan = () => {
-  window.location.href = "https://docs.google.com/document/d/1Qdcp8WBTPW_O_T64RqbOl8X6eo8ucUxs/edit?usp=sharing&ouid=104074875044099012246&rtpof=true&sd=true"
-}
 
-const goodAcct = () => {
-  window.location.href = "https://docs.google.com/document/d/1yS90W4UsFc9O-tcxPwuFwJ5TzAKIH-nN/edit?usp=sharing&ouid=104074875044099012246&rtpof=true&sd=true"
-}
+
 const Footer: React.FC = () => {
+const [isOpen, setIsOpen] = useState(false)
+
+function toggleModal() {
+  setIsOpen(!isOpen);
+}
+
   return (
     <div className='mt-5'>
       <div className="row">
@@ -38,8 +35,8 @@ const Footer: React.FC = () => {
                   </div>
                   <div className="footer-project">
                       <h5>Projects</h5>
-                      <p onClick={ getPartnership }>partnership</p>
-                      <p onClick={ getAchieve }>achievements</p>
+                      <p onClick={toggleModal}>partnership</p>
+                      <p>achievements</p>
                   </div>
                   <div className="footer-questionaire">
                       <h5>Questionaire</h5>
@@ -48,13 +45,22 @@ const Footer: React.FC = () => {
                   </div>
                   <div className="footer-teacher-guide">
                       <h5>Guide</h5>
-                      <p onClick={ lessonPlan }>lesson plan</p>
-                      <p onClick={ goodAcct}>goodwill account</p>
+                      <p>lesson plan</p>
+                      <p>goodwill account</p>
                   </div>
               </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
       </div>
+
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={toggleModal}
+        contentLabel="my modal"
+      >
+        <div></div>
+        <button onClick={toggleModal}>close modal</button>
+      </Modal>
     </div>
   )
 }
