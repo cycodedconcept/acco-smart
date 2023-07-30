@@ -20,3 +20,7 @@
 .temp:hover {
     color: #000;
 }
+
+.row {
+    margin: 0 !important;
+}

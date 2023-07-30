@@ -1,4 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { DefaultPlayer as Video } from 'react-html5video'
+import 'react-html5video/dist/styles.css'
+import Bullet from '../video/bullet.mp4'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './style.css'
@@ -10,7 +13,7 @@ interface Ivideo {
     image: any;
     heading: string;
     paragraph: string;
-    url: string;
+    video: any;
 }
 
 const myVideos: Ivideo[] = [
@@ -19,69 +22,84 @@ const myVideos: Ivideo[] = [
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        url: "https://www.projectguide.com"
+        video: Bullet
     },
     {
         id: 1,
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        url: "https://www.projectguide.com"
+        video: "https://www.projectguide.com"
     },
     {
         id: 2,
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        url: "https://www.projectguide.com"
+        video: "https://www.projectguide.com"
     },
     {
         id: 3,
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        url: "https://www.projectguide.com"
+        video: "https://www.projectguide.com"
     },
     {
         id: 4,
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        url: "https://www.projectguide.com"
+        video: "https://www.projectguide.com"
     },
     {
         id: 5,
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        url: "https://www.projectguide.com"
+        video: "https://www.projectguide.com"
     }
 ]
 
+
+
 // create a function to map through your array of objects
-const videoViewArr = myVideos.map(item =>
-    <div className='col-sm-12 col-md-12 col-lg-4' key={item.id}>
-        <div data-aos="zoom-out">
-        <div className='video-card'>
-            <div className="video-card-header">
-            <img src={ item.image } alt="" className='w-15'/>
-            </div>
-            <div className="video-card-body">
-                <h5 className='wash'>{ item.heading }</h5>
-                <p>{ item.paragraph }</p>
-            </div>
-            <div className="video-card-footer">
-                <button className='vbtn' onClick={() => window.location.href = item.url}>Download Project Guide</button>
-            </div>
-        </div>
-        </div>
-    </div>
-)
+
+
+
 
 const Home: React.FC = () => {
+const [toggle, setToggle] = useState(true)
+
     useEffect(() => {
         AOS.init();
     }, [])
+
+    const showModal = () => {
+        setToggle(!toggle)
+    }
+
+    const hideModal = () => {
+        setToggle(!toggle)
+    }
+    const videoViewArr = myVideos.map(item =>
+        <div className='col-sm-12 col-md-12 col-lg-4' key={item.id}>
+            <div data-aos="zoom-out">
+            <div className='video-card'>
+                <div className="video-card-header" onClick={showModal}>
+                <img src={ item.image } alt="" className='w-15'/>
+                </div>
+                <div className="video-card-body">
+                    <h5 className='wash'>{ item.heading }</h5>
+                    <p>{ item.paragraph }</p>
+                </div>
+                <div className="video-card-footer">
+                    <button className='vbtn'>Download Project Guide</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    )
 
   return (
     <div>
@@ -101,6 +119,22 @@ const Home: React.FC = () => {
                 </div>
             </div>
         </div>
+
+
+        <div id="re-modal" className={`mymodal ${toggle ? "hide-mymodal" : ""}`}>
+            <div className="modal-content">
+                <div className="modal-header">
+                    <span className="close" onClick={hideModal}>&times;</span>
+                </div>
+                <div className="modal-body">
+                    <Video autoPlay loop> 
+                        <source src={ Bullet } type='video/mp4' />
+                    </Video>
+                </div>
+            </div>
+        </div>
+        
+          
       
       <div className="row how">
           <div className="col-sm-12 col-md-12 col-lg-1"></div>

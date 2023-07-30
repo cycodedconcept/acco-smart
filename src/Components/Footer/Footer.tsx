@@ -1,19 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import './footer.css'
+
+
 import { Logo, Face, Twitter, In, Ins } from '../../assets/';
-
-import Modal from "react-modal"
-Modal.setAppElement("#root");
-
-
 
 
 const Footer: React.FC = () => {
-const [isOpen, setIsOpen] = useState(false)
+  useEffect(() => {
+    const rex: any = document.querySelectorAll(".nex");
+    for (let i = 0; i < rex.length; i++) {
+      rex[i].addEventListener("click", () => {
+        if (rex[i].innerHTML === "partnership") {
+          window.location.href = "https://docs.google.com/document/d/1jyN5SrQpAeTOWu6D89f-xIV8t4GRmbKA/edit?usp=drive_link"
+        }
+        else if (rex[i].innerHTML === "achievements") {
+          window.location.href = "https://docs.google.com/document/d/1kc9D-7aQkaDSDB7kxKoozPP2SLzOexQ4/edit?usp=drive_link"
+        }
 
-function toggleModal() {
-  setIsOpen(!isOpen);
-}
+        else if (rex[i].innerHTML === "lesson plan") {
+          window.location.href = "https://docs.google.com/document/d/1Qdcp8WBTPW_O_T64RqbOl8X6eo8ucUxs/edit?usp=drive_link"
+        }
+
+        else if (rex[i].innerHTML === "goodwill account") {
+          window.location.href = "https://docs.google.com/document/d/1yS90W4UsFc9O-tcxPwuFwJ5TzAKIH-nN/edit?usp=drive_link"
+        }
+      })
+    }
+  }, [])
 
   return (
     <div className='mt-5'>
@@ -35,8 +48,8 @@ function toggleModal() {
                   </div>
                   <div className="footer-project">
                       <h5>Projects</h5>
-                      <p onClick={toggleModal}>partnership</p>
-                      <p>achievements</p>
+                      <p className='nex'>partnership</p>
+                      <p className='nex'>achievements</p>
                   </div>
                   <div className="footer-questionaire">
                       <h5>Questionaire</h5>
@@ -45,22 +58,13 @@ function toggleModal() {
                   </div>
                   <div className="footer-teacher-guide">
                       <h5>Guide</h5>
-                      <p>lesson plan</p>
-                      <p>goodwill account</p>
+                      <p className='nex'>lesson plan</p>
+                      <p className='nex'>goodwill account</p>
                   </div>
               </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
       </div>
-
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={toggleModal}
-        contentLabel="my modal"
-      >
-        <div></div>
-        <button onClick={toggleModal}>close modal</button>
-      </Modal>
     </div>
   )
 }
