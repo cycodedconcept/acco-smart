@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { DefaultPlayer as Video } from 'react-html5video'
 import 'react-html5video/dist/styles.css'
-import Bullet from '../video/bullet.mp4'
+import { Bullet, Bull2, Bull3, Bull4, Bull5, Bull6 } from '../video'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './style.css'
 import { How1, How2, How3, Hero, Autonew, Lap, Clock, Vimage, Fimage } from '../assets'
+import e from 'express'
 
 
 interface Ivideo {
@@ -29,64 +30,67 @@ const myVideos: Ivideo[] = [
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: "https://www.projectguide.com"
+        video: Bull2
     },
     {
         id: 2,
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: "https://www.projectguide.com"
+        video: Bull3
     },
     {
         id: 3,
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: "https://www.projectguide.com"
+        video: Bull4
     },
     {
         id: 4,
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: "https://www.projectguide.com"
+        video: Bull5
     },
     {
         id: 5,
         image: Vimage,
         heading: "Marketing",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: "https://www.projectguide.com"
+        video: Bull6
     }
 ]
 
 
-
 // create a function to map through your array of objects
-
-
-
-
 const Home: React.FC = () => {
 const [toggle, setToggle] = useState(true)
+const [md, setMid] = useState(0);
 
     useEffect(() => {
         AOS.init();
     }, [])
 
-    const showModal = () => {
+    
+    const showModal = (id: number) => {
+        setToggle(!toggle)
+        setMid(id)
+    }
+    
+
+
+
+    const hideModal = (item: number) => {
         setToggle(!toggle)
     }
 
-    const hideModal = () => {
-        setToggle(!toggle)
-    }
+    
     const videoViewArr = myVideos.map(item =>
         <div className='col-sm-12 col-md-12 col-lg-4' key={item.id}>
             <div data-aos="zoom-out">
             <div className='video-card'>
-                <div className="video-card-header" onClick={showModal}>
+                <div className="video-card-header" onClick={()=>showModal(item.id)}>
                 <img src={ item.image } alt="" className='w-15'/>
                 </div>
                 <div className="video-card-body">
@@ -102,7 +106,7 @@ const [toggle, setToggle] = useState(true)
     )
 
   return (
-    <div>
+    <>
         <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <div className="section-hero" style={{backgroundImage: `url(${Hero})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
                 
@@ -120,19 +124,65 @@ const [toggle, setToggle] = useState(true)
             </div>
         </div>
 
+        {
+            myVideos && myVideos?.map((item, index) => (
+                <div key={index}>
+                    {item?.id === md && (
+                        <div id="re-modal" className={`mymodal ${toggle ? "hide-mymodal" : ""}`}>
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <span className="close" onClick={() => hideModal(item?.id)}>&times;</span>
+                            </div>
+                            <div className="modal-body">
+                                
+                                <Video autoPlay loop> 
+                                    <source src={ item.video } type='video/mp4' />
+                                </Video>
+                            </div>
+                        </div>
+                    </div>
+                    )}
+                </div>
+            ))
+        }
 
-        <div id="re-modal" className={`mymodal ${toggle ? "hide-mymodal" : ""}`}>
+
+        {/* {
+            myVideos.map((item) =>{
+                if (item.id === md) {
+                    <div id="re-modal" className={`mymodal ${toggle ? "hide-mymodal" : ""}`}>
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <span className="close" onClick={hideModal}>&times;</span>
+                        </div>
+                        <div className="modal-body">
+                            
+                            <Video autoPlay loop> 
+                                <source src={ item.video } type='video/mp4' />
+                            </Video>
+                        </div>
+                    </div>
+                </div>
+                console.log(md)
+                }
+            })
+        } */}
+
+        {/* <div id="re-modal" className={`mymodal ${toggle ? "hide-mymodal" : ""}`}>
             <div className="modal-content">
                 <div className="modal-header">
                     <span className="close" onClick={hideModal}>&times;</span>
                 </div>
                 <div className="modal-body">
                     <Video autoPlay loop> 
-                        <source src={ Bullet } type='video/mp4' />
+                    
+
+                        <source src={ Bull2 } type='video/mp4' />
+                    
                     </Video>
                 </div>
             </div>
-        </div>
+        </div> */}
         
           
       
@@ -203,7 +253,7 @@ const [toggle, setToggle] = useState(true)
 
       <div className="section-full-video" style={{backgroundImage: `url(${Fimage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}></div>
 
-    </div>
+    </>
   )
 }
 
