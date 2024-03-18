@@ -24,6 +24,8 @@ export const Phone = require('./phone.png');
 export const Mail = require('./env.png');
 export const ProImage = require('./pimg.png');
 export const Reach = require('./reach.png');
+export const What = require('./whatsap.png');
+
 
 
 

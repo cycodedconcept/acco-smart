@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { DefaultPlayer as Video } from 'react-html5video'
 import 'react-html5video/dist/styles.css'
-import { Bullet, Bull2, Bull3, Bull4, Bull5, Bull6 } from '../video'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './style.css'
-import { How1, How2, How3, Hero, Autonew, Lap, Clock, Vimage, Fimage } from '../assets'
-import e from 'express'
+import { How1, How2, How3, Hero, Autonew, Lap, Clock, Vimage, Fimage, What } from '../assets'
+import { Partnership } from '../pdf'
+
+
 
 
 interface Ivideo {
@@ -14,59 +15,63 @@ interface Ivideo {
     image: any;
     heading: string;
     paragraph: string;
-    video: any;
+    video: string;
+    downloadUrl: any;
 }
 
 const myVideos: Ivideo[] = [
     {
         id: 0,
         image: Vimage,
-        heading: "Marketing",
+        heading: "Calculation Interest On Capital",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: Bullet
+        video: "https://res.cloudinary.com/dufhtdavb/video/upload/v1710611124/samples/calculation_of_interest_xmhx1o.mp4",
+        downloadUrl: ''
     },
     {
         id: 1,
         image: Vimage,
-        heading: "Marketing",
+        heading: "Calculating Interest On Capital Cont.",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: Bull2
+        video: "https://res.cloudinary.com/dufhtdavb/video/upload/v1710611948/samples/calculation_of_interest2_ho78na.mp4",
+        downloadUrl: ''
+
     },
     {
         id: 2,
         image: Vimage,
-        heading: "Marketing",
+        heading: "Introduction To Partnership",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: Bull3
+        video: "https://res.cloudinary.com/dufhtdavb/video/upload/v1710612266/samples/introduction_to_partnership_jnmon4.mp4",
+        downloadUrl: ''
+
     },
     {
         id: 3,
         image: Vimage,
-        heading: "Marketing",
+        heading: "Partnership Account",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: Bull4
+        video: "https://res.cloudinary.com/dufhtdavb/video/upload/v1710612788/samples/partnership_account_j6ox3s.mp4",
+        downloadUrl: Partnership
+
     },
     {
         id: 4,
         image: Vimage,
-        heading: "Marketing",
+        heading: "Partnership Account cont.",
         paragraph: "Master the principles of 360 marketing for business growth.",
-        video: Bull5
-    },
-    {
-        id: 5,
-        image: Vimage,
-        heading: "Marketing",
-        paragraph: "Master the principles of 360 marketing for business growth.",
-        video: Bull6
+        video: "https://res.cloudinary.com/dufhtdavb/video/upload/v1710613358/samples/partnership2_lidz8x.mp4",
+        downloadUrl: ''
+
     }
 ]
 
 
 // create a function to map through your array of objects
 const Home: React.FC = () => {
-const [toggle, setToggle] = useState(true)
-const [md, setMid] = useState(0);
+
+    const [toggle, setToggle] = useState(true)
+    const [md, setMid] = useState(0);
 
     useEffect(() => {
         AOS.init();
@@ -85,6 +90,19 @@ const [md, setMid] = useState(0);
         setToggle(!toggle)
     }
 
+    const handleDownload = (e: any) => {
+        const pdfUrl = `${e.target.value}`;
+    
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.setAttribute('download', `${e.target.value}`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
+
+    const goToWhasapp = () => window.open("https://wa.me/8033384408?text=I've%20questions%20for%20you%20please%20thanks", '_blank')
+
     
     const videoViewArr = myVideos.map(item =>
         <div className='col-sm-12 col-md-12 col-lg-4' key={item.id}>
@@ -98,7 +116,7 @@ const [md, setMid] = useState(0);
                     <p>{ item.paragraph }</p>
                 </div>
                 <div className="video-card-footer">
-                    <button className='vbtn'>Download Project Guide</button>
+                    <button className='vbtn' value={item.downloadUrl} onClick={handleDownload}>{item.downloadUrl ? 'download document' : ''}</button>
                 </div>
             </div>
             </div>
@@ -131,6 +149,10 @@ const [md, setMid] = useState(0);
                         <div id="re-modal" className={`mymodal ${toggle ? "hide-mymodal" : ""}`}>
                         <div className="modal-content">
                             <div className="modal-header">
+                                <div className="whsap">
+                                    <img src={ What } alt="" onClick={ goToWhasapp }/>
+                                    <p className='mt-2 ml-2'>For Question Click the WhatsApp icon</p>
+                                </div>
                                 <span className="close" onClick={() => hideModal(item?.id)}>&times;</span>
                             </div>
                             <div className="modal-body">
@@ -145,46 +167,6 @@ const [md, setMid] = useState(0);
                 </div>
             ))
         }
-
-
-        {/* {
-            myVideos.map((item) =>{
-                if (item.id === md) {
-                    <div id="re-modal" className={`mymodal ${toggle ? "hide-mymodal" : ""}`}>
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <span className="close" onClick={hideModal}>&times;</span>
-                        </div>
-                        <div className="modal-body">
-                            
-                            <Video autoPlay loop> 
-                                <source src={ item.video } type='video/mp4' />
-                            </Video>
-                        </div>
-                    </div>
-                </div>
-                console.log(md)
-                }
-            })
-        } */}
-
-        {/* <div id="re-modal" className={`mymodal ${toggle ? "hide-mymodal" : ""}`}>
-            <div className="modal-content">
-                <div className="modal-header">
-                    <span className="close" onClick={hideModal}>&times;</span>
-                </div>
-                <div className="modal-body">
-                    <Video autoPlay loop> 
-                    
-
-                        <source src={ Bull2 } type='video/mp4' />
-                    
-                    </Video>
-                </div>
-            </div>
-        </div> */}
-        
-          
       
       <div className="row how">
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
@@ -234,6 +216,7 @@ const [md, setMid] = useState(0);
           </div>
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
       </div>
+       
 
       <div className="section-works mt-5 mb-5">
           <div className="row">
@@ -243,16 +226,16 @@ const [md, setMid] = useState(0);
                   <div className="row">
                       { videoViewArr }
                   </div>
-                  <div className="view-section-btn text-center mt-5">
+                  {/* <div className="view-section-btn text-center mt-5">
                       <button>View all Project</button>
-                  </div>
+                  </div> */}
               </div>
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
           </div>
       </div>
 
       <div className="section-full-video" style={{backgroundImage: `url(${Fimage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}></div>
-
+      
     </>
   )
 }

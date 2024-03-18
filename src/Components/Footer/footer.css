@@ -9,12 +9,20 @@
     justify-content: space-between;
 }
 
-.footer-project p, .footer-teacher-guide p {
+.footer-project p, .footer-teacher-guide p, .footer-questionaire p {
     cursor: pointer;
 }
 
 .row {
     margin: 0 !important;
+}
+
+.spar {
+    outline: none;
+    border: 0;
+    box-shadow: none;
+    display: block;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 992px) {
