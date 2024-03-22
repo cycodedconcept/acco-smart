@@ -4,6 +4,10 @@
     font-family: "Lexend", sans-serif;
 }
 
+.footer-sec {
+    background: #ECFFEC;
+}
+
 .footer-section {
     display: flex;
     justify-content: space-between;

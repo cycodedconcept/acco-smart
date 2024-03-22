@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
   }, [])
 
   return (
-    <div className='mt-5 mb-5'>
+    <div className='mt-5 footer-sec py-5'>
       <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
           <div className="col-sm-12 col-md-12 col-lg-10">
