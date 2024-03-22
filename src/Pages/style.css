@@ -130,6 +130,10 @@ body {
     height: 420px;
 }
 
+.video-card-header img {
+    width: 100%;
+}
+
 .video-card-body {
     padding: 10px 0;
 }
