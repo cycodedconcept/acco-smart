@@ -188,7 +188,7 @@ body {
         margin: 17px 30px;
     }
 
-    .hero-content {
+    .hero-content, .hero-content-about {
         padding: 15% 14px;
     }
     
