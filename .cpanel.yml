@@ -1,5 +1,8 @@
+
 ---
 deployment:
   tasks:
+    - npm install --production
+    - npm run build
     - export DEPLOYPATH=/home/eatblvvi/public_html
-    - /bin/cp -r $APP_NEW_PATH/* $DEPLOYPATH
+    - /bin/cp -r build/* $DEPLOYPATH
