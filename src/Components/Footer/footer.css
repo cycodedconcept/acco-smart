@@ -13,6 +13,11 @@
     cursor: pointer;
 }
 
+.footer-project h5, .footer-teacher-guide h5, .footer-questionaire h5 {
+    color: #266A26;
+    font-weight: 700;
+}
+
 .row {
     margin: 0 !important;
 }
@@ -23,7 +28,35 @@
     box-shadow: none;
     display: block;
     margin-bottom: 10px;
+    background: none;
 }
+
+.spar:hover, .nex:hover {
+    color: #266A26;
+}
+
+.mymodal {
+    display: block;
+}
+
+
+
+
+.pdf-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .react-pdf__Page {
+    display: block !important; /* Ensure pages fill the container width */
+    margin: 0 auto; /* Center the page horizontally */
+  }
+  
+  .react-pdf__Page canvas {
+    max-width: 100%; /* Ensure the canvas stays within the page width */
+  }
+  
 
 @media screen and (max-width: 992px) {
     .footer-section {

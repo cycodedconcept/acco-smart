@@ -24,7 +24,7 @@ body {
     margin-right: 15px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     border-radius: 20px;
-    height: 400px;
+    height: 450px;
 }
 
 .work-head {
@@ -101,7 +101,7 @@ body {
 
 .hero-content-about {
     position: absolute;
-    right: 5%;
+    right: 0;
 }
 
 .hero-content h1, .hero-content-about h1 {
@@ -115,6 +115,10 @@ body {
     border: 0;
     box-shadow: none;
     background: #fff;
+    color: #222;
+}
+
+.vbtn:hover {
     color: #266A26;
 }
 
@@ -123,7 +127,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
-    height: 450px;
+    height: 420px;
 }
 
 .video-card-body {
@@ -230,7 +234,7 @@ body {
   
 .modal-content {
     margin: 10% auto;
-    width: 60%;
+    width: 80%;
     animation-name: modalopen;
     animation-duration: 2s;
     background: transparent;

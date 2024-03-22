@@ -3,18 +3,17 @@ import './footer.css'
 import { Logo, Face, Twitter, In, Ins } from '../../assets/';
 import { Partnership, Goodwill, Lesson } from '../../pdf'
 import { Document, Page, pdfjs } from 'react-pdf';
-import { url } from 'inspector';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 
-interface Ifooter {
+interface footer {
   id: number,
   name: string,
   doc: any
 }
 
-const footerList: Ifooter[] = [
+const footerList: footer[] = [
   {
     id: 0,
     name: "Partnership",
@@ -36,11 +35,12 @@ const footerList: Ifooter[] = [
 
 
 const Footer: React.FC = () => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [numPages, setNumPages] = useState<number | null>(null);
   const [getUrl, setGetUrl] = useState('');
+  const [showModal, setShowModal] = useState(false)
+  const [width, setWidth] = useState<number>(window.innerWidth * 0.8);
 
-  function onDocumentLoadSuccess({ numPages }: any) {
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
   }
   
@@ -49,9 +49,22 @@ const Footer: React.FC = () => {
     console.log(e.target.value)
     let url =  `${e.target.value}`;
     setGetUrl(url)
+    setShowModal(!showModal)
   }
 
+  const hideMyModal = () => {
+    setShowModal(!showModal)
+  }
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth * 0.8); // Update width on window resize
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const footerItem = footerList.map(item => 
     <button key={item.id} value={item.doc} className="spar" onClick={changePdf}>{item.name}</button>
@@ -59,36 +72,30 @@ const Footer: React.FC = () => {
 
   
 
+
   useEffect(() => {
     const rex: any = document.querySelectorAll(".nex");
     for (let i = 0; i < rex.length; i++) {
       rex[i].addEventListener("click", () => {
-        if (rex[i].innerHTML === "partnership") {
-          window.open("https://docs.google.com/document/d/1jyN5SrQpAeTOWu6D89f-xIV8t4GRmbKA/edit?usp=drive_link", '_blank')
+        if (rex[i].innerHTML === "ARS questionaire") {
+          window.open("https://forms.gle/ssaV2qcVWmcrYdEw9",  "width = 200, height = 200")
         }
         else if (rex[i].innerHTML === "Achievements") {
           window.open("https://docs.google.com/document/d/1kc9D-7aQkaDSDB7kxKoozPP2SLzOexQ4/edit?usp=drive_link", '_blank')
         }
 
-        else if (rex[i].innerHTML === "lesson plan") {
-          window.open("https://docs.google.com/document/d/1Qdcp8WBTPW_O_T64RqbOl8X6eo8ucUxs/edit?usp=drive_link", '_blank')
+        else if (rex[i].innerHTML === "students attitude questionaire") {
+          window.open("https://forms.gle/561Jx7UH5tu4fKgF6", '_blank')
         }
-
-        else if (rex[i].innerHTML === "goodwill account") {
-          window.open("https://docs.google.com/document/d/1yS90W4UsFc9O-tcxPwuFwJ5TzAKIH-nN/edit?usp=drive_link", '_blank')
-        }
-        else if (rex[i].innerHTML === "students attitude") {
-          window.open("https://forms.gle/UZCw89YjrtYqeNVJ8", '_blank')
-        }
-        else if (rex[i].innerHTML === "information questionaire") {
-          window.open("https://forms.gle/kuhgrP6Z8AC7tgpq5", '_blank')
+        else if (rex[i].innerHTML === "student information questionaire") {
+          window.open("https://forms.gle/2rigpufyPoFH4uW39", '_blank')
         }
       })
     }
   }, [])
 
   return (
-    <div className='mt-5'>
+    <div className='mt-5 mb-5'>
       <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
           <div className="col-sm-12 col-md-12 col-lg-10">
@@ -97,7 +104,7 @@ const Footer: React.FC = () => {
                   <div className="footer-logo">
                       <img src={ Logo } alt="" className='mb-4'/>
                       <p>
-                        Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit. Enim.
+                         Increased brand visibility or credibility<br></br> through association.
                       </p>
                       <div className="footer-social">
                           <img src={ Ins } alt="" className='mr-3'/>
@@ -112,8 +119,9 @@ const Footer: React.FC = () => {
                   </div>
                   <div className="footer-questionaire">
                       <h5>Questionaire</h5>
-                      <p className='nex'>students attitude</p>
-                      <p className='nex'>information questionaire</p>
+                      <p className='nex'>students attitude questionaire</p>
+                      <p className='nex'>student information questionaire</p>
+                      <p className='nex'>ARS questionaire</p>
                   </div>
                   <div className="footer-teacher-guide">
                       <h5>Guide</h5>
@@ -123,22 +131,35 @@ const Footer: React.FC = () => {
           </div>
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
       </div>
-      <div id="id" className="mymodal">
-        
-      </div>
-      <Document
-        file={getUrl}
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page pageNumber={pageNumber} />
-      </Document>
-      {/* <p>Page {pageNumber} of {numPages}</p>
-      <button onClick={() => setPageNumber(pageNumber - 1)} disabled={pageNumber <= 1}>
-        Previous Page
-      </button>
-      <button onClick={() => setPageNumber(pageNumber + 1)} disabled={pageNumber >= numPages}>
-        Next Page
-      </button> */}
+      {
+        showModal && (
+          <div id="doc-modal" className="mymodal" >
+            <div className="modal-content">
+              <div className="modal-header">
+                <span className="close" onClick={hideMyModal}>&times;</span>
+              </div>
+              <div className="modal-body">
+              <Document
+                    file={getUrl}
+                    onLoadSuccess={onDocumentLoadSuccess}
+                  >
+                    {Array.from(
+                      new Array(numPages),
+                      (el, index) => (
+                        <Page
+                          key={`page_${index + 1}`}
+                          pageNumber={index + 1}
+                          width={width}
+                        />
+                      ),
+                    )}
+                  </Document>
+              </div>
+            </div>
+          </div>
+        )
+      }
+      
     </div>
   )
 }

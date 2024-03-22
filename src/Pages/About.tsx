@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './style.css'
-import { Autonew, Lap, Clock, Ahero, V1, V2, ProImage, Fimage, Lif, Lib, Liins, Mark, Phone, Mail, Reach } from '../assets'
+import { Autonew, Lap, Clock, Ahero, V1, V2, ProImage, Lif, Lib, Liins, Mark, Phone, Mail, Reach } from '../assets'
 
 
 
@@ -17,22 +17,22 @@ const aboutCard: Card[] = [
     {
         id: 0,
         image: V1,
-        text: "Agile"
+        text: "ARS"
     },
     {
         id: 0,
         image: V2,
-        text: "Ambition"
+        text: "Partnership"
     },
     {
         id: 0,
         image: V1,
-        text: "Teamwork"
+        text: "SIL"
     },
     {
         id: 0,
         image: V2,
-        text: "Speed"
+        text: "Interest"
     }
 ]
 
@@ -63,13 +63,13 @@ const About: React.FC = () => {
             <div className="section-hero" style={{backgroundImage: `url(${Ahero})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
             
             <div className="hero-content-about">
-                <h1>Upskill For Global<br></br> Growth.</h1>
+                <h1>Upskill For Global<br></br> Growth via Partnership.</h1>
                 <p>
-                    Learn cutting-edge Business, Management and<br></br> Corporate skills with real world case studies and<br></br> earn globally recognized certificates
+                    Learn cutting-edge Partnership, Management and<br></br> Corporate skills with real world case studies and<br></br> effect globally recognized opportunities
                 </p>
                 <div className="hero-icons-about">
-                    <p className='mr-5'><img src={ Autonew } alt="" /> Flexible</p>
-                    <p className='mr-5'><img src={ Clock } alt="" /> Fast</p>
+                    <p className='mr-5'><img src={ Autonew } alt="" /> Informating</p>
+                    <p className='mr-5'><img src={ Clock } alt="" /> Educating</p>
                     <p><img src={ Lap } alt="" /> 100% Online</p>
                 </div>
             </div>
@@ -91,33 +91,21 @@ const About: React.FC = () => {
           </div>
       </div>
 
-      <div className="section-project">
+      <div className="section-project my-5">
           <div className="row">
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
               <div className="col-sm-12 col-md-12 col-lg-10">
-                  <h2 className='text-center pohead'>Our Project</h2>
+                  <h2 className='text-center pohead'>Objective</h2>
 
                   <div className="row">
                       <div className="col-sm-12 col-md-12 col-lg-6">
                           <div className="project-text">
-                              <h3>Our <span className='wash mb-5'>Health Training</span><br></br> Services</h3>
+                              <h3><span className='wash mb-5'>PARTNERSHIP AGREEMENT</span></h3>
                               <p>
-                                At our company, we believe that a versatile workforce is the 
-                                cornerstone of an effective work place especially in the health 
-                                system. That's why we offer a range of health training programs 
-                                that help individuals develop the knowledge and skills they need to 
-                                make informed decisions in their work place, 
+                                  Partnership agreement allows for effective and efficient running of partnership business. The set of rules guiding the operation of partnership business is contained in a document known as, “Partnership Deeds”. The agreement must be signed by partners in the presence of a lawyer. Although people can enter into partnership without any written form of agreement but it is advisable to have a written agreement. 
                               </p>
                               <p>
-                                manage clients as well 
-                                as work with other colleagues in an environment devoid of workplace 
-                                crises. Our programs cover a wide range of topics, from Leadership 
-                                and Management in Health, Project management, Human Resource 
-                                management, to Electrocardiogram Interpretation, mental health etc. 
-                                Over the years, we have helped thousands of healthcare professionals attain 
-                                their goals across continents – students who participated in our online courses 
-                                have come from various countries including Zambia, UAE, Russia, USA, UK, Ghana, 
-                                Botswana, Namibia, Nigeria among others.
+                              Partnership accounting is purely an extension of the basic principles governing the final accounts of a sole trader. The final accounts of a sole trader comprises of the Trading, Profits and Loss Account and the Balance Sheet while the partnership accounting add two other accounts to the aforementioned accounts. These are: i. Appropriation Account ii. Current and Capital Account
                               </p>
                           </div>
                       </div>
@@ -130,9 +118,8 @@ const About: React.FC = () => {
           </div>
       </div>
 
-      <div className="section-full-video mt-5" style={{backgroundImage: `url(${Fimage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}></div>
 
-      <div className="section-reach">
+      <div className="section-reach" id='section'>
           <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
           <div className="col-sm-12 col-md-12 col-lg-10">
@@ -142,10 +129,10 @@ const About: React.FC = () => {
                           <h2 className='wash mb-5'>Reach Out to Us</h2>
 
                           <p><img src={ Phone } alt="" className='mr-3'/> +234 803 338 4408</p>
-                          <p><img src={ Lib } alt="" className='mr-3'/> credbride_consulting</p>
-                          <p><img src={ Liins } alt="" className='mr-3'/> credbride_consulting</p>
-                          <p><img src={ Lif } alt="" className='mr-3'/> credbride_consulting</p>
-                          <p><img src={ Mail } alt="" className='mr-3'/> info.credbrideconsulting@gmail.com</p>
+                          <p><img src={ Lib } alt="" className='mr-3'/> accosmart_consulting</p>
+                          <p><img src={ Liins } alt="" className='mr-3'/> accosmart_consulting</p>
+                          <p><img src={ Lif } alt="" className='mr-3'/> accosmart_consulting</p>
+                          <p><img src={ Mail } alt="" className='mr-3'/> info@accosmartconsulting</p>
                           <p><img src={ Mark } alt="" className='mr-3'/> 11 Opebi Street Ikeja, Lagos State</p>
                       </div>
                   </div>

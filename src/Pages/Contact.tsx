@@ -21,10 +21,10 @@ const Contact: React.FC = () => {
                           <h2 className='wash mb-5'>Reach Out to Us</h2>
 
                           <p><img src={ Phone } alt="" className='mr-3'/> +234 803 338 4408</p>
-                          <p><img src={ Lib } alt="" className='mr-3'/> credbride_consulting</p>
-                          <p><img src={ Liins } alt="" className='mr-3'/> credbride_consulting</p>
-                          <p><img src={ Lif } alt="" className='mr-3'/> credbride_consulting</p>
-                          <p><img src={ Mail } alt="" className='mr-3'/> info.credbrideconsulting@gmail.com</p>
+                          <p><img src={ Lib } alt="" className='mr-3'/> accosmart_consulting</p>
+                          <p><img src={ Liins } alt="" className='mr-3'/> accosmart_consulting</p>
+                          <p><img src={ Lif } alt="" className='mr-3'/> accosmart_consulting</p>
+                          <p><img src={ Mail } alt="" className='mr-3'/> info@accosmartconsulting</p>
                           <p><img src={ Mark } alt="" className='mr-3'/> 11 Opebi Street Ikeja, Lagos State</p>
                       </div>
                   </div>
