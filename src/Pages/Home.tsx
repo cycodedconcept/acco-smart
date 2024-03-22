@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { DefaultPlayer as Video } from 'react-html5video'
 import 'react-html5video/dist/styles.css'
 import AOS from 'aos'
@@ -66,6 +66,7 @@ const Home: React.FC = () => {
 
     const [toggle, setToggle] = useState(true)
     const [md, setMid] = useState(0);
+    const videoRef = useRef<HTMLVideoElement | null>(null);
 
     useEffect(() => {
         AOS.init();
@@ -77,6 +78,7 @@ const Home: React.FC = () => {
         setMid(id)
     }
     
+
 
 
 
@@ -95,7 +97,7 @@ const Home: React.FC = () => {
         document.body.removeChild(link);
       };
 
-    const goToWhasapp = () => window.open("https://wa.me/8033384408?text=I've%20questions%20for%20you%20please%20thanks", '_blank')
+    const goToWhasapp = () => window.open("https://wa.me/+2348033384408?text=I've%20questions%20for%20you%20please%20thanks", '_blank')
 
     
     const videoViewArr = myVideos.map(item =>
@@ -151,7 +153,7 @@ const Home: React.FC = () => {
                             </div>
                             <div className="modal-body">
                                 
-                                <Video autoPlay loop> 
+                                <Video ref={videoRef} controls> 
                                     <source src={ item.video } type='video/mp4' />
                                 </Video>
                             </div>

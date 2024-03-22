@@ -184,7 +184,14 @@ body {
         margin: 17px 30px;
     }
 
+    .hero-content {
+        padding: 15% 14px;
+    }
     
+    .hero-content h1 {
+        font-size: 35px;
+        margin-bottom: 60px;
+    }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {

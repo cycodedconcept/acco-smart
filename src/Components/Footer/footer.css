@@ -66,6 +66,18 @@
     .footer-section {
         flex-direction: column;
     }
+
+    .footer-social {
+        margin-bottom: 30px;
+    }
+
+    .footer-questionaire {
+        margin-top: 30px;
+    }
+
+    .footer-teacher-guide {
+        margin-top: 30px;
+    }
 }
 
 
