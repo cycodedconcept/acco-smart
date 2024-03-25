@@ -212,9 +212,7 @@ const Home: React.FC = () => {
           </div>
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
       </div>
-       
-
-      <div className="section-works mt-5 mb-5" id='section-video'>
+      <div className="section-works mt-5 mb-5" id='section'>
           <div className="row">
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
               <div className="col-sm-12 col-md-12 col-lg-10">
@@ -225,7 +223,9 @@ const Home: React.FC = () => {
               </div>
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
           </div>
-      </div>      
+      </div> 
+       
+           
     </>
   )
 }

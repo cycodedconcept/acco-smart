@@ -63,20 +63,20 @@ const About: React.FC = () => {
         <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <div className="section-hero" style={{backgroundImage: `url(${Ahero})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
             
-            <div className="hero-content-about">
-                <h1> Foster growth,<br></br> ethical practices,<br></br> and continuous learning</h1>
-                <p>
-                   Whether you're a beginner or looking to refine your skills, our<br></br> 
-                   expertly crafted tutorials, interactive exercises, and comprehensive<br></br>
-                   resources are designed to make learning accounting<br></br> accessible and 
-                   enjoyable.
-                </p>
-                <div className="hero-icons-about">
-                    <p className='mr-5'><img src={ Autonew } alt="" /> Informating</p>
-                    <p className='mr-5'><img src={ Clock } alt="" /> Educating</p>
-                    <p><img src={ Lap } alt="" /> 100% Online</p>
+                <div className="hero-content-about">
+                    <h1> Foster growth,<br></br> ethical practices,<br></br> and continuous learning</h1>
+                    <p>
+                    Whether you're a beginner or looking to refine your skills, our<br></br> 
+                    expertly crafted tutorials, interactive exercises, and comprehensive<br></br>
+                    resources are designed to make learning accounting<br></br> accessible and 
+                    enjoyable.
+                    </p>
+                    <div className="hero-icons-about">
+                        <p className='mr-5'><img src={ Autonew } alt="" /> Informating</p>
+                        <p className='mr-5'><img src={ Clock } alt="" /> Educating</p>
+                        <p><img src={ Lap } alt="" /> 100% Online</p>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
 
@@ -103,33 +103,37 @@ const About: React.FC = () => {
 
                   <div className="row">
                       <div className="col-sm-12 col-md-12 col-lg-7">
-                          <div className="project-text">
-                              <h3><span className='wash mb-5'>About The Mentor</span></h3>
-                              <p>
-                                 Mr. Abanum Collins is more than just a teacher; he's a mentor and a guide, deeply committed to his students' success. He employs innovative teaching methods and provides extra support to ensure that each student grasps the fundamental concepts of accounting.
-                              </p>
-                              <p>
-                                 His dedication stems from his personal journey, and he strives to be the teacher he never had, inspiring his students to not only excel academically but to also understand the real-world applications of their knowledge.
-                              </p>
-                              <div className="vm-section">
-                                  <div className="misson">
-                                      <h3 className='wash'>Our Mission</h3>
-                                      <p>- Empower individuals globally with accessible online financial accounting education.</p>
-                                      <p>- Equip learners with expertise and practical skills for the financial world.</p>
-                                      <p>- Foster growth, ethical practices, and continuous learning.</p>
-                                  </div>
-                                  <div className="Vission">
-                                      <h3 className='wash'>Our Vision</h3>
-                                      <p>- Become the leading online learning platform in financial accounting.</p>
-                                      <p>- Recognized for excellence in education and innovation.</p>
-                                      <p>- Offer cutting-edge courses that meet the finance industry's evolving needs.</p>
-                                      <p>- Nurture a community of professionals dedicated to impacting the global economy positively.</p>
-                                  </div>
-                              </div>
+                          <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <div className="project-text">
+                                    <h3><span className='wash mb-5'>About The Mentor</span></h3>
+                                    <p>
+                                        Mr. Abanum Collins is more than just a teacher; he's a mentor and a guide, deeply committed to his students' success. He employs innovative teaching methods and provides extra support to ensure that each student grasps the fundamental concepts of accounting.
+                                    </p>
+                                    <p>
+                                        His dedication stems from his personal journey, and he strives to be the teacher he never had, inspiring his students to not only excel academically but to also understand the real-world applications of their knowledge.
+                                    </p>
+                                    <div className="vm-section">
+                                        <div className="misson">
+                                            <h3 className='wash'>Our Mission</h3>
+                                            <p>- Empower individuals globally with accessible online financial accounting education.</p>
+                                            <p>- Equip learners with expertise and practical skills for the financial world.</p>
+                                            <p>- Foster growth, ethical practices, and continuous learning.</p>
+                                        </div>
+                                        <div className="Vission ml-5">
+                                            <h3 className='wash'>Our Vision</h3>
+                                            <p>- Become the leading online learning platform in financial accounting.</p>
+                                            <p>- Recognized for excellence in education and innovation.</p>
+                                            <p>- Offer cutting-edge courses that meet the finance industry's evolving needs.</p>
+                                            <p>- Nurture a community of professionals dedicated to impacting the global economy positively.</p>
+                                        </div>
+                                    </div>
+                                </div>
                           </div>
                       </div>
                       <div className="col-sm-12 col-md-12 col-lg-5">
-                          <img src={ Au } alt="" className='au'/>
+                          <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                             <img src={ Au } alt="" className='au'/>
+                          </div>
                       </div>
                   </div>
 
@@ -137,18 +141,22 @@ const About: React.FC = () => {
 
                   <div className="row">
                       <div className="col-sm-12 col-md-12 col-lg-6 mt-5">
-                          <div className="project-text2">
-                              <h3><span className='wash mb-5'>Acoounting & Interest</span></h3>
-                              <p>
-                              Welcome to Accounting Simplified, the ultimate online destination for mastering the art of accounting. Our platform is dedicated to providing clear, concise, and engaging accounting lessons for students of secondary schools. 
-                              </p>
-                              <p>
-                                 Whether you're a beginner or looking to refine your skills, our expertly crafted tutorials, interactive exercises, and comprehensive resources are designed to make learning accounting accessible and enjoyable. Join us and unlock your potential in the world of finance and numbers!
-                              </p>
+                          <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <div className="project-text2">
+                                    <h3><span className='wash mb-5'>Acoounting & Interest</span></h3>
+                                    <p>
+                                    Welcome to Accounting Simplified, the ultimate online destination for mastering the art of accounting. Our platform is dedicated to providing clear, concise, and engaging accounting lessons for students of secondary schools. 
+                                    </p>
+                                    <p>
+                                        Whether you're a beginner or looking to refine your skills, our expertly crafted tutorials, interactive exercises, and comprehensive resources are designed to make learning accounting accessible and enjoyable. Join us and unlock your potential in the world of finance and numbers!
+                                    </p>
+                                </div>
                           </div>
                       </div>
                       <div className="col-sm-12 col-md-12 offset-lg-1 col-lg-5">
-                          <img src={ ProImage } alt="" className='w-100 project-text2'/>
+                          <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                              <img src={ ProImage } alt="" className='w-100 project-text2'/>
+                          </div>
                       </div>
                   </div>
 

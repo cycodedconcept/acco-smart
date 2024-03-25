@@ -1,6 +1,6 @@
 export const Face = require('./f.png');
 export const Twitter = require('./t.png');
-export const In = require('./link.png');
+// export const In = require('./link.png');
 export const Ins = require('./ins.png');
 export const Logo = require('./logo.png');
 export const How1 = require('./how1.png');
@@ -31,6 +31,8 @@ export const Pi = require('./Pi.png');
 export const Pi2 = require('./Pi2.png');
 export const Fav = require('./fav.png');
 export const Au = require('./au.png');
+export const Te = require('./Te.png');
+
 
 
 

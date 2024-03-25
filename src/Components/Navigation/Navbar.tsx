@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './navbar.css'
 import Logo from '../../assets/logo.png';
 
+
+  
 const Navbar: React.FC = () => {
   return (
     <div>
@@ -24,7 +26,7 @@ const Navbar: React.FC = () => {
                         <Link to='/About' className='nav-link'>About</Link>
                     </li>
                     <li className="nav-item active">
-                        <Link to='/About#section' className='nav-link'>Videos</Link>
+                        <Link to='/#section' className='nav-link'>Videos</Link>
                     </li>
                     
                     </ul>

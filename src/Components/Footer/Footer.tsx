@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './footer.css'
-import { Logo, Face, Twitter, In, Ins } from '../../assets/';
+import { Logo, Face, Twitter, Ins, Te } from '../../assets/';
 import { Partnership, Goodwill, Lesson } from '../../pdf'
 import { Document, Page, pdfjs } from 'react-pdf';
 
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
           window.open("https://forms.gle/ssaV2qcVWmcrYdEw9",  "width = 200, height = 200")
         }
         else if (rex[i].innerHTML === "Achievements") {
-          window.open("https://docs.google.com/document/d/1kc9D-7aQkaDSDB7kxKoozPP2SLzOexQ4/edit?usp=drive_link", '_blank')
+          window.open("https://forms.gle/JTU9X7Fse14xzzik7", '_blank')
         }
 
         else if (rex[i].innerHTML === "students attitude questionaire") {
@@ -107,10 +107,11 @@ const Footer: React.FC = () => {
                          Increased brand visibility or credibility<br></br> through association.
                       </p>
                       <div className="footer-social">
-                          <img src={ Ins } alt="" className='mr-3'/>
-                          <img src={ Face } alt="" className='mr-3'/>
-                          <img src={ Twitter } alt="" className='mr-3'/>
-                          <img src={ In } alt="" />
+                          <a href='https://t.me/accosmart'><img src={ Te } alt="" className='mr-3'/></a>
+                          <a href='https://web.facebook.com/accosmartt'><img src={ Face } alt="" className='mr-3'/></a>
+                          <a href='https://twitter.com/AbanumisCollins'><img src={ Twitter } alt="" className='mr-3'/></a>
+                          <a href='https://www.instagram.com/accosmartt/'><img src={ Ins } alt="" /></a>
+
                       </div>
                   </div>
                   <div className="footer-project">
