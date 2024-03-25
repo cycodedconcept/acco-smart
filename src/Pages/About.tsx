@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './style.css'
-import { Autonew, Lap, Clock, Ahero, V1, V2, ProImage, Lif, Lib, Liins, Mark, Phone, Mail, Reach } from '../assets'
+import Contact from './Contact'
+import { Autonew, Lap, Clock, Ahero, V1, V2, ProImage, Au } from '../assets'
 
 
 
@@ -63,9 +64,12 @@ const About: React.FC = () => {
             <div className="section-hero" style={{backgroundImage: `url(${Ahero})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
             
             <div className="hero-content-about">
-                <h1>Upskill For Global<br></br> Growth via Partnership.</h1>
+                <h1> Foster growth,<br></br> ethical practices,<br></br> and continuous learning</h1>
                 <p>
-                    Learn cutting-edge Partnership, Management and<br></br> Corporate skills with real world case studies and<br></br> effect globally recognized opportunities
+                   Whether you're a beginner or looking to refine your skills, our<br></br> 
+                   expertly crafted tutorials, interactive exercises, and comprehensive<br></br>
+                   resources are designed to make learning accounting<br></br> accessible and 
+                   enjoyable.
                 </p>
                 <div className="hero-icons-about">
                     <p className='mr-5'><img src={ Autonew } alt="" /> Informating</p>
@@ -95,56 +99,64 @@ const About: React.FC = () => {
           <div className="row">
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
               <div className="col-sm-12 col-md-12 col-lg-10">
-                  <h2 className='text-center pohead'>Objective</h2>
+                  <h2 className='text-center pohead'>Who We Are</h2>
 
                   <div className="row">
-                      <div className="col-sm-12 col-md-12 col-lg-6">
+                      <div className="col-sm-12 col-md-12 col-lg-7">
                           <div className="project-text">
-                              <h3><span className='wash mb-5'>PARTNERSHIP AGREEMENT</span></h3>
+                              <h3><span className='wash mb-5'>About The Mentor</span></h3>
                               <p>
-                                  Partnership agreement allows for effective and efficient running of partnership business. The set of rules guiding the operation of partnership business is contained in a document known as, “Partnership Deeds”. The agreement must be signed by partners in the presence of a lawyer. Although people can enter into partnership without any written form of agreement but it is advisable to have a written agreement. 
+                                 Mr. Abanum Collins is more than just a teacher; he's a mentor and a guide, deeply committed to his students' success. He employs innovative teaching methods and provides extra support to ensure that each student grasps the fundamental concepts of accounting.
                               </p>
                               <p>
-                              Partnership accounting is purely an extension of the basic principles governing the final accounts of a sole trader. The final accounts of a sole trader comprises of the Trading, Profits and Loss Account and the Balance Sheet while the partnership accounting add two other accounts to the aforementioned accounts. These are: i. Appropriation Account ii. Current and Capital Account
+                                 His dedication stems from his personal journey, and he strives to be the teacher he never had, inspiring his students to not only excel academically but to also understand the real-world applications of their knowledge.
+                              </p>
+                              <div className="vm-section">
+                                  <div className="misson">
+                                      <h3 className='wash'>Our Mission</h3>
+                                      <p>- Empower individuals globally with accessible online financial accounting education.</p>
+                                      <p>- Equip learners with expertise and practical skills for the financial world.</p>
+                                      <p>- Foster growth, ethical practices, and continuous learning.</p>
+                                  </div>
+                                  <div className="Vission">
+                                      <h3 className='wash'>Our Vision</h3>
+                                      <p>- Become the leading online learning platform in financial accounting.</p>
+                                      <p>- Recognized for excellence in education and innovation.</p>
+                                      <p>- Offer cutting-edge courses that meet the finance industry's evolving needs.</p>
+                                      <p>- Nurture a community of professionals dedicated to impacting the global economy positively.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div className="col-sm-12 col-md-12 col-lg-5">
+                          <img src={ Au } alt="" className='au'/>
+                      </div>
+                  </div>
+
+                  <h2 className='text-center pohead'>Accounting Simplified</h2>
+
+                  <div className="row">
+                      <div className="col-sm-12 col-md-12 col-lg-6 mt-5">
+                          <div className="project-text2">
+                              <h3><span className='wash mb-5'>Acoounting & Interest</span></h3>
+                              <p>
+                              Welcome to Accounting Simplified, the ultimate online destination for mastering the art of accounting. Our platform is dedicated to providing clear, concise, and engaging accounting lessons for students of secondary schools. 
+                              </p>
+                              <p>
+                                 Whether you're a beginner or looking to refine your skills, our expertly crafted tutorials, interactive exercises, and comprehensive resources are designed to make learning accounting accessible and enjoyable. Join us and unlock your potential in the world of finance and numbers!
                               </p>
                           </div>
                       </div>
-                      <div className="col-sm-12 col-md-12 col-lg-6">
-                          <img src={ ProImage } alt="" className='w-100'/>
+                      <div className="col-sm-12 col-md-12 offset-lg-1 col-lg-5">
+                          <img src={ ProImage } alt="" className='w-100 project-text2'/>
                       </div>
                   </div>
+
               </div>
               <div className="col-sm-12 col-md-12 col-lg-1"></div>
           </div>
       </div>
-
-
-      <div className="section-reach" id='section'>
-          <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-1"></div>
-          <div className="col-sm-12 col-md-12 col-lg-10">
-              <div className="row">
-                  <div className="col-sm-12 col-md-12 col-lg-6">
-                      <div className="reach-text">
-                          <h2 className='wash mb-5'>Reach Out to Us</h2>
-
-                          <p><img src={ Phone } alt="" className='mr-3'/> +234 803 338 4408</p>
-                          <p><img src={ Lib } alt="" className='mr-3'/> accosmart_consulting</p>
-                          <p><img src={ Liins } alt="" className='mr-3'/> accosmart_consulting</p>
-                          <p><img src={ Lif } alt="" className='mr-3'/> accosmart_consulting</p>
-                          <p><img src={ Mail } alt="" className='mr-3'/> info@accosmartconsulting</p>
-                          <p><img src={ Mark } alt="" className='mr-3'/> 11 Opebi Street Ikeja, Lagos State</p>
-                      </div>
-                  </div>
-                  <div className="col-sm-12 col-md-12 col-lg-6">
-                      <img src={ Reach } alt="" className='w-75'/>
-                  </div>
-              </div>
-          </div>
-          <div className="col-sm-12 col-md-12 col-lg-1"></div>
-          </div>
-      </div>
-      
+      <Contact />
     </div>
   )
 }

@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
                       <p className='nex'>ARS questionaire</p>
                   </div>
                   <div className="footer-teacher-guide">
-                      <h5>Guide</h5>
+                      <h5>Test</h5>
                       <p className='nex'>Achievements</p>
                   </div>
               </div>

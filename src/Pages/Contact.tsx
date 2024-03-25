@@ -24,8 +24,8 @@ const Contact: React.FC = () => {
                           <p><img src={ Lib } alt="" className='mr-3'/> accosmart_consulting</p>
                           <p><img src={ Liins } alt="" className='mr-3'/> accosmart_consulting</p>
                           <p><img src={ Lif } alt="" className='mr-3'/> accosmart_consulting</p>
-                          <p><img src={ Mail } alt="" className='mr-3'/> info@accosmartconsulting</p>
-                          <p><img src={ Mark } alt="" className='mr-3'/> 11 Opebi Street Ikeja, Lagos State</p>
+                          <p><img src={ Mail } alt="" className='mr-3'/> info@accosmart.com.ng</p>
+                          <p><img src={ Mark } alt="" className='mr-3'/>faculty of education, lagos state university</p>
                       </div>
                   </div>
                   <div className="col-sm-12 col-md-12 col-lg-6">

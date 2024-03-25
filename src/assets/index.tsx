@@ -30,6 +30,8 @@ export const Ci2 = require('./ci2.png');
 export const Pi = require('./Pi.png');
 export const Pi2 = require('./Pi2.png');
 export const Fav = require('./fav.png');
+export const Au = require('./au.png');
+
 
 
 
