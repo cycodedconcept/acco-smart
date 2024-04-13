@@ -155,7 +155,8 @@ const About: React.FC = () => {
                       </div>
                       <div className="col-sm-12 col-md-12 offset-lg-1 col-lg-5">
                           <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                              <img src={ ProImage } alt="" className='w-100 project-text2'/>
+                          <img src={ ProImage } alt="" className='w-100 project-text2'/>
+
                           </div>
                       </div>
                   </div>
