@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
                   </div>
                   <div className="footer-questionaire">
                       <h5>Questionaire</h5>
-                      <p className='nex'>students attitude questionaire</p>
+                      <p className='nex'>accounting student technology proficiency</p>
                       <p className='nex'>student information questionaire</p>
                       <p className='nex'>ARS questionaire</p>
                   </div>
